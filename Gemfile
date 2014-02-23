@@ -5,7 +5,7 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'mysql2' #adapter ket noi mysql
 
 
 # Gems used only for assets and not required
@@ -20,7 +20,23 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :development, :test do 
+  gem 'mysql2' #adapter ket noi mysql
+end
+
+group :production do
+  gem 'pg' #adapter ket noi mysql
+end
+
 gem 'jquery-rails'
+gem 'jquery-rails'
+gem 'will_paginate', '~> 3.0' #phan trang
+gem 'bcrypt-ruby', '~> 3.0.0'  #confirm pass
+gem "i18n", "~> 0.6.1" #setup i18n
+gem "mail", "~> 2.5.4" #gui email
+gem "paperclip", "~> 2.3" #setup upload file
+gem 'aws-s3'
+gem 'aws-sdk'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -36,7 +52,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
 gem 'execjs'
 gem 'therubyracer'
 gem 'thin'
-gem 'pg'
